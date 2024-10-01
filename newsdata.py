@@ -7,22 +7,22 @@ app = Flask(__name__)
 @app.route('/fetch-news')
 def fetch_news():
     category = request.args.get('category')
-    apiKey = 'f446cbb0c08f4b33b48317e568e702fb'  # 替換為你的 News API 金鑰
+    apiKey = ''  # Your News API key
     url = f'https://newsapi.org/v2/top-headlines?category={category}&apiKey={apiKey}'
     response = requests.get(url)
     data = response.json()
-    print(data)  # 檢查 API 返回的完整數據
+    print(data)  # check API return data
     if data['status'] == 'ok':
-        # 連接到 SQLite 資料庫
+        # connect to SQLite database
         conn = sqlite3.connect('news.db')
         cursor = conn.cursor()
         
-        # 將每篇新聞插入資料庫
+        # put every news into the database
         for article in data['articles']:
             title = article['title']
             description = article.get('description', '沒有描述')
             url = article['url']
-            category = category  # 將選擇的類型也存入資料庫
+            category = category  # choose category into the news database
             print(title, description, url, category)
             try:
                 cursor.execute('''INSERT INTO news (title, description, url, category) VALUES (?, ?, ?, ?)''', (title, description, url, category))
