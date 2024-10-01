@@ -1,7 +1,7 @@
 // Fetch news when the button is clicked
 document.getElementById('fetch-news').addEventListener('click', function() {
     const category = document.getElementById('category').value;
-    const apiKey = 'f446cbb0c08f4b33b48317e568e702fb'; // Your News API key
+    const apiKey = ''; // Your News API key
     const url = `https://newsapi.org/v2/top-headlines?category=${category}&apiKey=${apiKey}`;
 
     fetch(url)
