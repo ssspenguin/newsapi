@@ -28,7 +28,9 @@ To set up the project locally, follow these steps:
    ```bash
    git clone https://github.com/yourusername/personalized-news-system.git
    
-2.Install the required Python packages:
-    pip install flask requests beautifulsoup4 pandas numpy matplotlib PyQt5 cx_Freeze
+2. Install the required Python packages:
+    pip install flask sqlite3 requests
     
-3.Install Live Serve which is in vscode extension
+3. Install Live Serve which is in vscode extension
+
+4. Get the NewsAPI (Remerber write the key into app.js and newsdata.py)
