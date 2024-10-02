@@ -30,7 +30,7 @@ To set up the project locally, follow these steps:
    
 2. Install the required Python packages:
   ```bash
-    pip install flask sqlite3 requests
+  pip install flask sqlite3 requests
     
 3. Install Live Serve which is in vscode extension
 
