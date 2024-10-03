@@ -29,7 +29,7 @@ To set up the project locally, follow these steps:
    git clone https://github.com/yourusername/personalized-news-system.git
    
 2. Install the required Python packages:
-   pip install flask sqlite3 requests
+   pip install flask sqlite3 requests beautifulsoup4
     
 3. Install Live Serve which is in vscode extension
 
